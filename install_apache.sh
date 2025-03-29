@@ -9,9 +9,22 @@ else
 	echo "apache2 is not running"
 	sudo systemctl start apache2
 	sudo systemctl eanble apache2
+	echo "print status of apche.services"
+	sudo systemctl status apache2
 fi
 
 echo "installing  docker "
+echo "adding user"
+
+
+
+users="ram shyam hari gopal"  # Define user list
+
+for user in $users  # Loop through each user
+do
+    echo "Adding user: $user"
+    sudo useradd $user  # Add user (needs sudo privileges)
+done
 
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 
