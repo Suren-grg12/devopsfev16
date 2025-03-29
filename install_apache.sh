@@ -11,4 +11,15 @@ else
 	sudo systemctl eanble apache2
 fi
 
+echo "adding user"
+
+
+
+users="ram shyam hari gopal"  # Define user list
+
+for user in $users  # Loop through each user
+do
+    echo "Adding user: $user"
+    sudo useradd $user  # Add user (needs sudo privileges)
+done
 
