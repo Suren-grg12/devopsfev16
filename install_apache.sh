@@ -41,5 +41,6 @@ echo "this is from featureB"
 
 echo "we are practicing git rebash"
 
-echo for rebash practice
+
+echo "this is featureA"
 
