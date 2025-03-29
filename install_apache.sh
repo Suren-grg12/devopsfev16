@@ -9,6 +9,8 @@ else
 	echo "apache2 is not running"
 	sudo systemctl start apache2
 	sudo systemctl eanble apache2
+	echo "print status of apche.services"
+	sudo systemctl status apache2
 fi
 
 echo "adding user"
